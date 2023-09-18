@@ -3,7 +3,7 @@ class BrazoRobotico{
 		double x, y, z;
 		bool objeto;
 	public:
-		void BrazoRobotico(double x, double y, double z, bool objeto);
+		BrazoRobotico(double x, double y, double z, bool objeto);
 		double getX();
 		double getY();
 		double getZ();

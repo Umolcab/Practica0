@@ -1,7 +1,7 @@
 #include "BrazoRobotico.h"
 #include <stdexcept>
 
-void BrazoRobotico::BrazoRobotico(double x, double y, double z, bool objeto){
+BrazoRobotico::BrazoRobotico(double x, double y, double z, bool objeto){
 	this->x = x;
 	this->y = y;
 	this->z = z;
@@ -26,7 +26,7 @@ bool BrazoRobotico::getObjeto(){
 
 void BrazoRobotico::coger(){
 	if(objeto){
-		throw runtime_error("No se puede coger un objeto");
+		throw std::runtime_error("No se puede coger un objeto");
 	}else{
 		objeto = true;
 	}
@@ -34,7 +34,7 @@ void BrazoRobotico::coger(){
 
 void BrazoRobotico::soltar(){
 	if(!objeto){
-		throw runtime_error("No hay ningun objeto que soltar");
+		throw std::runtime_error("No hay ningun objeto que soltar");
 	}else{
 		objeto = false;
 	}
